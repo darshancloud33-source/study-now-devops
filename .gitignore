@@ -1,0 +1,17 @@
+node_modules/
+**/node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+coverage/
+*.log
+
+# Backup files and temporary restore data
+backups/
+*.archive
+*.archive.gz
+
+# Local secrets and encryption keys
+age-key.txt
+*.key
