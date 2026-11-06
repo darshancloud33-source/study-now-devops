@@ -39,6 +39,9 @@ if [[ ! -s "$BACKUP_FILE" ]]; then
   exit 1
 fi
 
+echo "Removing encrypted backups older than 7 days..."
+find "$BACKUP_DIR" -type f -name '*.archive.gz.age' -mmin +10080 -print -delete
+
 echo "Backup completed successfully."
 echo "File: $BACKUP_FILE"
 ls -lh "$BACKUP_FILE"
