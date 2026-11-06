@@ -99,8 +99,25 @@ if ! docker compose exec -T nginx nginx -s reload; then
   exit 1
 fi
 
-SWITCHED=true
-
 echo "Nginx configuration validated and reloaded."
+
+echo "Verifying application through Nginx..."
+READY=false
+
+for attempt in $(seq 1 15); do
+  if curl --fail --silent --max-time 3 http://localhost:8081/ready >/dev/null; then
+    READY=true
+    break
+  fi
+  sleep 2
+done
+
+if [[ "$READY" != "true" ]]; then
+  echo "ERROR: Application failed post-deployment readiness check."
+  rollback
+  exit 1
+fi
+
+echo "Post-deployment readiness check passed."
 echo "Deployment successful."
 echo "Traffic switched from $ACTIVE_SERVICE to $TARGET_SERVICE."
