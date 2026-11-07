@@ -71,6 +71,8 @@ Local assessment implementation and validation completed. GitHub Actions validat
 ### Scope and limitations
 This is a local Docker-based recovery demonstration using synthetic test data. The backup directory is an offsite-storage simulation only; it is not an independently hosted backup destination. The 62-second measurement applies to this local drill and does not establish production RTO or RPO compliance. Hourly backups, seven-day local retention, five-minute health checks, and Discord failure notifications are configured and tested locally. Production still requires independent hosted backup storage, reliable server-side scheduling, restore testing, and production monitoring.
 
+<img width="2940" height="1912" alt="50BA948A-5F92-4DE3-8646-EF1EC381965C" src="https://github.com/user-attachments/assets/ce8a286a-2a0a-45c4-ab83-b3397da64b65" />
+
 ## Blue-Green Deployment and Rollback
 
 ### Deployment architecture
@@ -159,6 +161,9 @@ Both application versions share the same MongoDB database. Database schema chang
 - Test notification was visible in Discord `#general`.
 - Two simulated health-check failures triggered Discord notifications.
 - The actual application was not stopped during these tests.
+
+<img width="2940" height="1839" alt="BD3F51DC-CC15-4BC2-B2BC-120EBCB1B204_1_201_a" src="https://github.com/user-attachments/assets/2e0232a7-b901-40d6-b4b4-a2ed14eb4a3f" />
+
 
 ### Scheduling limitations
 
