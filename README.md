@@ -1,5 +1,5 @@
 # Study Now - DevOps Assessment
-# Name - Darsha D
+# Name - Darshan D
 
 
 ## Objective
