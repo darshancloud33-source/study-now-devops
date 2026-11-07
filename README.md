@@ -15,6 +15,26 @@ using Docker, MongoDB, Nginx and GitHub Actions.
 - Encrypted MongoDB backups (local offsite simulation)
 - Health monitoring and alerting
 
+## Architecture Diagram for your Study Now DevOps Engineer assessment. It includes application infrastructure, CI/CD, Blue-Green deployment, security, backup and restore, monitoring, and the operational workflow.
+
+<img width="4666" height="5824" alt="image" src="https://github.com/user-attachments/assets/20790b60-98bc-4fa3-854c-45279e95de58" />
+
+
+# Shows User → Nginx → Blue/Green Node.js → MongoDB, including Docker Compose.
+<img width="1188" height="872" alt="image" src="https://github.com/user-attachments/assets/032c031d-f8d3-435e-8e79-46bf62312b01" />
+
+
+# Shows how traffic switches between Blue and Green and how rollback works.
+<img width="800" height="533" alt="image" src="https://github.com/user-attachments/assets/a854f582-b426-4156-8b9f-c90ff6af8105" />
+
+
+
+# Part 2 disaster recovery architecture
+# Shows the proposed Linode, DigitalOcean, Cloudflare DNS and backup recovery strategy.
+<img width="478" height="473" alt="image" src="https://github.com/user-attachments/assets/86cf0eca-402d-4f6a-be57-8d2f47a3413a" />
+
+
+
 ## Recovery Objectives
 - Target RTO: 4 hours
 - Target RPO: 1 hour
